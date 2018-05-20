@@ -18,4 +18,15 @@
 
 function arrayEqual(a, b) {
   /* your code here */
+  a = JSON.stringify(a);
+  b = JSON.stringify(b);
+  return a === b;
 }
+
+const a = [1,2,3];
+const aa = JSON.stringify(a);
+const b = [1,2,3];
+const bb = JSON.stringify(b);
+
+console.log(a === b); // false
+console.log(aa === bb); // true
