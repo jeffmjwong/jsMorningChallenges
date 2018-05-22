@@ -11,9 +11,18 @@ values({one: 1, two: 2, three: 3});
 */
 
 // Your code here!
-const values = () => {
+const values = (object) => {
+  const valuesArray = [];
+  // for (let prop in object) {
+  //   valuesArray.push(object[prop]);
+  // }
+  Object.keys(object).forEach(function(prop) {
+    valuesArray.push((object[prop]));
+  });
+  return valuesArray;
 }
 
+console.log(values({a: 1, b: 2, c: 3}));
 // Check your solution by running these tests: mocha *this_filename*
 const assert = require('assert');
 
