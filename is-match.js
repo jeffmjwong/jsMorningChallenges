@@ -8,8 +8,11 @@ isMatch(stooge, {age: 32});
 */
 
 // Your code here!
-const isMatch = () => {
-
+const isMatch = (obj1, obj2) => {
+  for (let key in obj1) {
+    if (obj1[key] === obj2[key]) return true
+  }
+  return false;
 }
 
 // Check your solution by running these tests: mocha *this_filename*
