@@ -12,11 +12,9 @@ through them. Look up the “rest parameter” syntax.
 // Your code here!
 const pick = (object, ...params) => {
   const newObject = {};
-  for (let prop1 in object) {
-    for (let prop2 of params) {
-      if (prop1 === prop2) {
-        newObject[prop1] = object[prop1];
-      }
+  for (let element of params) {
+    if (object[element]) {
+      newObject[element] = object[element];
     }
   }
   return newObject;
