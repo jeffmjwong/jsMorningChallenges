@@ -10,31 +10,31 @@ through them. Look up the “rest parameter” syntax.
 */
 
 // Your code here!
-// const pick = (object, ...params) => {
-//   const newObject = {};
-//   for (let prop1 in object) {
-//     for (let prop2 of params) {
-//       if (prop1 === prop2) {
-//         newObject[prop1] = object[prop1];
-//       }
-//     }
-//   }
-//   return newObject;
-// }
+const pick = (object, ...params) => {
+  const newObject = {};
+  for (let prop1 in object) {
+    for (let prop2 of params) {
+      if (prop1 === prop2) {
+        newObject[prop1] = object[prop1];
+      }
+    }
+  }
+  return newObject;
+}
 
 // Check your solution by running these tests: mocha *this_filename*
-const assert = require(‘assert’);
+const assert = require('assert');
 
-describe(‘Pick’, () => {
+describe('Pick', () => {
  const list = {a: 1, b: 2, c: 3};
 
- it(‘can pick a single property’, () => {
-   const result = pick(list, ‘a’);
+ it('can pick a single property', () => {
+   const result = pick(list, 'a');
    const expected = {a: 1};
    assert.deepEqual(result, expected);
  })
- it(‘can pick multiple properties’, () => {
-     const result = pick(list, ‘a’, ‘c’);
+ it('can pick multiple properties', () => {
+     const result = pick(list, 'a', 'c');
      const expected = {a: 1, c: 3};
      assert.deepEqual(result, expected);
  })
