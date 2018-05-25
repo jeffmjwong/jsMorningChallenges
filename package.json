@@ -1,0 +1,22 @@
+{
+  "name": "js-morning-challenge",
+  "version": "1.0.0",
+  "description": "Morning Challenge Pick",
+  "main": "underscore-test.js",
+  "scripts": {
+    "test": "mocha $1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffmjwong/jsMorningChallenges.git"
+  },
+  "author": "Jeff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeffmjwong/jsMorningChallenges/issues"
+  },
+  "homepage": "https://github.com/jeffmjwong/jsMorningChallenges#readme",
+  "dependencies": {
+    "underscore": "^1.9.0"
+  }
+}
