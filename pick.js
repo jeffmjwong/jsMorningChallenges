@@ -12,11 +12,7 @@ through them. Look up the “rest parameter” syntax.
 // Your code here!
 const pick = (object, ...params) => {
   const newObject = {};
-  for (let element of params) {
-    if (object[element]) {
-      newObject[element] = object[element];
-    }
-  }
+  params.forEach(element => newObject[element] = object[element]);
   return newObject;
 }
 
