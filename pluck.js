@@ -8,9 +8,9 @@ pluck(stooges, 'name');
 => ['moe', 'larry']
 */
 
-const pluck = () => {
-  // Your code here!
-}
+const pluck = (array, prop) => {
+  return array.map(element => element[prop]);
+};
 
 // Check your solution by running the tests: mocha *this_filename*
 const assert = require('assert');
