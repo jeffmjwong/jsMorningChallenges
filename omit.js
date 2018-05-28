@@ -9,7 +9,13 @@ through them. Look up the "rest parameter" syntax.
 */
 
 // Your code here!
-const omit = () => {
+const omit = (object, ...keys) => {
+  for (const key of keys) {
+    if (object[key]) {
+      delete object[key];
+    }
+  }
+  return object;
 }
 
 // Check your solution by running these tests: mocha *this_filename*
