@@ -14,7 +14,14 @@ _.findLastIndex(users, {
 */
 
 // Your code here!
-const findLastIndex = () => {
+const findLastIndex = (array, object) => {
+  for (let index = (array.length - 1); index >= 0; index--) {
+    for (const key in array[index]) {
+      if (array[index][key] === object[key]) {
+        return index;
+      }
+    }
+  }
 }
 
 // Check your solution by running these tests: mocha *this_filename*
