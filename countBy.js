@@ -11,7 +11,12 @@ _.countBy([1, 2, 3, 4, 5], (num) => {
 */
 
 // Your code here!
-const countBy = () => {
+const countBy = (array, handler) => {
+  let object = {};
+  for (const element of array) {
+    object[handler(element)] ? object[handler(element)] += 1 : object[handler(element)] = 1;
+  }
+  return object;
 }
 
 // Check your solution by running these tests: mocha *this_filename*
