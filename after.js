@@ -15,10 +15,15 @@ greetAfter()
 */
 
 // Your code here!
-const after = () => {
-
+const after = (num, func) => {
+  let counter = 0;
+  return () => {
+    counter += 1;
+    if (counter >= num) {
+      return func();
+    }
+  }
 }
-
 
 // Check your solution by running these tests: mocha *this_filename*
 const assert = require('assert');
