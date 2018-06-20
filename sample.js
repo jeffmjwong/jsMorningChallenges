@@ -10,7 +10,20 @@ sample([1, 2, 3, 4, 5, 6], 3);
 */
 
 // Your code here!
-const sample = () => {
+const sample = (array, n) => {
+  const newArray = [];
+  if (!n || n < 1) {
+    const randomIndex = Math.floor(Math.random() * Math.floor(array.length));
+    return array[randomIndex];
+  } else if (n > array.length) {
+    n = array.length;
+  }
+  for (let i = 0; i < n; i++) {
+    const randomIndex = Math.floor(Math.random() * Math.floor(array.length));
+    newArray.push(array[randomIndex]);
+    array.splice(randomIndex, 1);
+  }
+  return newArray;
 }
 
 
