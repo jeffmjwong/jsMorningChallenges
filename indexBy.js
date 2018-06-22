@@ -11,7 +11,17 @@ indexBy(stooges, 'age');
 */
 
 // Your code here!
-const indexBy = () => {
+const indexBy = (array, key) => {
+  const newObject = {};
+  for (const profile of array) {
+    !newObject[profile[key]] ? newObject[profile[key]] = [profile] : newObject[profile[key]].push(profile);
+  }
+  for (const key in newObject) {
+    if (newObject[key].length === 1) {
+      newObject[key] = newObject[key][0];
+    }
+  }
+  return newObject;
 }
 
 // Check your solution by running these tests: mocha *this_filename*
@@ -40,7 +50,7 @@ describe('IndexBy', () => {
 
 // Want to try Beat Mode? Replace xdescribe with describe :)
 // Beast mode: handle duplicate keys (build an array)
-xdescribe('I woke up in beast mode:', () => {
+describe('I woke up in beast mode:', () => {
   it('creates an array for duplicate keys', () => {
     const stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'kanye', age: 40}];
     let result = indexBy(stooges, 'age');
