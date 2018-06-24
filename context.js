@@ -12,22 +12,22 @@ const ye = { name: 'Kanye' }
 // a) Research: call, apply and bind. Guess the output of each before running:
 
 // b)
-// whatsThisThen()
+whatsThisThen()
 // My expectation:
 // Actual output:
 
 // c)
-// whatsThisThen('hello!')
+whatsThisThen('hello!')
 // My expectation:
 // Actual output:
 
 // d)
-// whatsThisThen.call(ye)
+whatsThisThen.call(ye)
 // My expectation:
 // Actual output:
 
 // e)
-// whatsThisThen.call(ye, 'hello!')
+whatsThisThen.call(ye, 'hello!')
 // My expectation:
 // Actual output:
 
@@ -37,7 +37,7 @@ const ye = { name: 'Kanye' }
 // Actual output:
 
 // g)
-// whatsThisThen.apply(ye, ['hello'])
+whatsThisThen.apply(ye, ['hello'])
 // My expectation:
 // Actual output:
 
